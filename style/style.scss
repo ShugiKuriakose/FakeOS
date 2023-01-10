@@ -1,0 +1,310 @@
+:root {
+  --modal-duration: 1s;
+  --modal-color: #428bca;
+}
+
+body {
+  // background-image
+  background: url("../images/windowsXP.png") center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  main {
+    display: flex;
+    flex-direction: column;
+
+    .iconbutton {
+      background-color: transparent;
+      border: 0;
+      width: 100px;
+    }
+
+    // Testing Modal
+
+    .icon {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      //height: 24%;
+      //width: 30%;
+
+      // overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .icon-content {
+      margin: 1% 1% 1% 1%;
+      //width: 60%;
+      box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+        0 7px 20px 0 rgba(0, 0, 0, 0.17);
+      animation-name: modalopen;
+      animation-duration: var(--modal-duration);
+    }
+
+    .icon-header h2,
+    .icon-footer h3 {
+      margin: 0;
+    }
+
+    .icon-header {
+      background: var(--modal-color);
+      padding: 5px;
+      color: #fff;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .icon-body {
+      padding: 2px 2px;
+      background: #fff;
+    }
+
+    .icon-footer {
+      background: var(--modal-color);
+      padding: 2px;
+      color: #fff;
+      text-align: center;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    .close {
+      color: #ccc;
+      float: right;
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .dragging {
+      border-radius: 20px;
+      background-color: rgba(120, 145, 145, 0.501);
+    }
+
+    .draggable {
+      cursor: pointer;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      border-radius: 0px;
+      transition: border-radius 0.5s ease-out, background-color 0.5s ease-out;
+      //width: 20px;
+    }
+
+    @keyframes modalopen {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    // Testing Modal
+
+    .icons {
+      margin: 0px 0px 0px 0px;
+      padding: 30px 30px 30px 30px;
+      width: 50px;
+
+      &:hover {
+        background-color: #335486;
+      }
+
+      p {
+        background-color: #335486;
+        color: white;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #246ad3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3.5%;
+
+    // start button
+    .startButton {
+      font-size: 20px;
+      color: white;
+      background-color: rgb(36, 158, 67);
+      padding: 0px;
+      width: 115px;
+      margin-top: 5px;
+      border: none;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      img {
+        width: 20%;
+        padding: 1px;
+        margin: 0px;
+      }
+    }
+
+    .startMenu {
+      position: relative;
+
+      #menuItems {
+        display: none;
+        flex-direction: column;
+        border: 1px solid #246ad3;
+        z-index: 1;
+        position: absolute;
+        background-color: #246ad3;
+        bottom: 30px;
+        min-width: 360px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        width: 45%;
+      }
+
+      #turnoffButton {
+        display: flex;
+        width: 98%;
+        background-color: #246ad3;
+
+        align-items: center;
+        flex-direction: row;
+        justify-content: right;
+        color: white;
+        font-size: 12px;
+        padding-top: 0px;
+        padding: 2px;
+        margin: 2px;
+
+        p {
+          padding: 2px;
+          padding-right: 2px;
+          margin: 2px;
+        }
+      }
+
+      #ieuserlogo {
+        display: flex;
+        width: 100%;
+        background-color: #246ad3;
+        border-top-right-radius: 12px;
+        border-top-right-radius: 12px;
+        align-items: center;
+        flex-direction: row;
+        justify-content: left;
+        color: white;
+        font-size: 20px;
+        padding-top: 2px;
+
+        #ieuser {
+          margin: 12px;
+          padding: 0px;
+        }
+
+        img {
+          width: 80%;
+          height: 80%;
+          margin-left: 12px;
+        }
+      }
+    }
+
+    .menuItems__columns {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      #column1 {
+        background-color: #fff;
+        padding: 5px;
+        border: #335486;
+        width: 50%;
+      }
+      #column2 {
+        background-color: rgb(204, 224, 243);
+        padding: 5px;
+        width: 50%;
+      }
+
+      hr {
+        width: 70%;
+      }
+
+      .listItem1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+          padding: 0px;
+          margin: 0px;
+          font-size: 12px;
+        }
+
+        h6 {
+          padding: 2px;
+          margin: 2px;
+        }
+      }
+      #allprg {
+        justify-content: center;
+        p {
+          padding-right: 13px;
+        }
+      }
+    }
+
+    .timeButton {
+      width: 11%;
+      float: right;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: hwb(204 15% 25%);
+      border: none;
+      border-left: 1px solid black;
+      color: white;
+      height: 100%;
+
+      p {
+        font-size: 15px;
+        margin: auto;
+      }
+
+      img {
+        width: 15%;
+        padding: 5px;
+        margin: auto;
+      }
+
+      #defender {
+        width: 20%;
+        padding: 1px;
+        margin: auto;
+      }
+      #defender1 {
+        width: 20%;
+        padding: 1px;
+        margin: auto;
+      }
+
+      #printer {
+        width: 20%;
+        padding: 1px;
+        margin: auto;
+      }
+    }
+  }
+}

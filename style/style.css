@@ -1,0 +1,269 @@
+:root {
+  --modal-duration: 1s;
+  --modal-color: #428bca;
+}
+
+body {
+  background: url("../images/windowsXP.png") center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+}
+body main .iconbutton {
+  background-color: transparent;
+  border: 0;
+  width: 100px;
+}
+body main .icon {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body main .icon-content {
+  margin: 1% 1% 1% 1%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  -webkit-animation-name: modalopen;
+          animation-name: modalopen;
+  -webkit-animation-duration: var(--modal-duration);
+          animation-duration: var(--modal-duration);
+}
+body main .icon-header h2,
+body main .icon-footer h3 {
+  margin: 0;
+}
+body main .icon-header {
+  background: var(--modal-color);
+  padding: 5px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+body main .icon-body {
+  padding: 2px 2px;
+  background: #fff;
+}
+body main .icon-footer {
+  background: var(--modal-color);
+  padding: 2px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+body main .close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+body main .close:hover,
+body main .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+body main .dragging {
+  border-radius: 20px;
+  background-color: rgba(120, 145, 145, 0.501);
+}
+body main .draggable {
+  cursor: pointer;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  border-radius: 0px;
+  transition: border-radius 0.5s ease-out, background-color 0.5s ease-out;
+}
+@-webkit-keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body main .icons {
+  margin: 0px 0px 0px 0px;
+  padding: 30px 30px 30px 30px;
+  width: 50px;
+}
+body main .icons:hover {
+  background-color: #335486;
+}
+body main .icons p {
+  background-color: #335486;
+  color: white;
+}
+body nav {
+  display: flex;
+  flex-direction: row;
+  background-color: #246ad3;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3.5%;
+}
+body nav .startButton {
+  font-size: 20px;
+  color: white;
+  background-color: rgb(36, 158, 67);
+  padding: 0px;
+  width: 115px;
+  margin-top: 5px;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+body nav .startButton img {
+  width: 20%;
+  padding: 1px;
+  margin: 0px;
+}
+body nav .startMenu {
+  position: relative;
+}
+body nav .startMenu #menuItems {
+  display: none;
+  flex-direction: column;
+  border: 1px solid #246ad3;
+  z-index: 1;
+  position: absolute;
+  background-color: #246ad3;
+  bottom: 30px;
+  min-width: 360px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  width: 45%;
+}
+body nav .startMenu #turnoffButton {
+  display: flex;
+  width: 98%;
+  background-color: #246ad3;
+  align-items: center;
+  flex-direction: row;
+  justify-content: right;
+  color: white;
+  font-size: 12px;
+  padding-top: 0px;
+  padding: 2px;
+  margin: 2px;
+}
+body nav .startMenu #turnoffButton p {
+  padding: 2px;
+  padding-right: 2px;
+  margin: 2px;
+}
+body nav .startMenu #ieuserlogo {
+  display: flex;
+  width: 100%;
+  background-color: #246ad3;
+  border-top-right-radius: 12px;
+  border-top-right-radius: 12px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
+  color: white;
+  font-size: 20px;
+  padding-top: 2px;
+}
+body nav .startMenu #ieuserlogo #ieuser {
+  margin: 12px;
+  padding: 0px;
+}
+body nav .startMenu #ieuserlogo img {
+  width: 80%;
+  height: 80%;
+  margin-left: 12px;
+}
+body nav .menuItems__columns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+body nav .menuItems__columns #column1 {
+  background-color: #fff;
+  padding: 5px;
+  border: #335486;
+  width: 50%;
+}
+body nav .menuItems__columns #column2 {
+  background-color: rgb(204, 224, 243);
+  padding: 5px;
+  width: 50%;
+}
+body nav .menuItems__columns hr {
+  width: 70%;
+}
+body nav .menuItems__columns .listItem1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body nav .menuItems__columns .listItem1 p {
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+}
+body nav .menuItems__columns .listItem1 h6 {
+  padding: 2px;
+  margin: 2px;
+}
+body nav .menuItems__columns #allprg {
+  justify-content: center;
+}
+body nav .menuItems__columns #allprg p {
+  padding-right: 13px;
+}
+body nav .timeButton {
+  width: 11%;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: hwb(204 15% 25%);
+  border: none;
+  border-left: 1px solid black;
+  color: white;
+  height: 100%;
+}
+body nav .timeButton p {
+  font-size: 15px;
+  margin: auto;
+}
+body nav .timeButton img {
+  width: 15%;
+  padding: 5px;
+  margin: auto;
+}
+body nav .timeButton #defender {
+  width: 20%;
+  padding: 1px;
+  margin: auto;
+}
+body nav .timeButton #defender1 {
+  width: 20%;
+  padding: 1px;
+  margin: auto;
+}
+body nav .timeButton #printer {
+  width: 20%;
+  padding: 1px;
+  margin: auto;
+}/*# sourceMappingURL=style.css.map */
