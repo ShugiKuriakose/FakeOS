@@ -58,11 +58,139 @@ body {
       color: #fff;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
+      text-align: center;
     }
 
     .icon-body {
-      padding: 2px 2px;
+      padding: 12px 12px;
       background: #fff;
+
+      img {
+        width: 25%;
+        height: 25%;
+      }
+    }
+
+    #excel {
+      width: 500px;
+      margin: 4% auto;
+      font-family: "Source Sans Pro", sans-serif;
+      letter-spacing: 5px;
+      font-size: 1.8rem;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      .calculator {
+        padding: 20px;
+        -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 1px;
+      }
+
+      .input {
+        border: 1px solid #ddd;
+        border-radius: 1px;
+        height: 60px;
+        padding-right: 15px;
+        padding-top: 10px;
+        text-align: right;
+        margin-right: 6px;
+        font-size: 2.5rem;
+        overflow-x: auto;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .input:hover {
+        border: 1px solid #bbb;
+        -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      .buttons {
+      }
+
+      .operators {
+      }
+
+      .operators div {
+        display: inline-block;
+        border: 1px solid #bbb;
+        border-radius: 1px;
+        width: 80px;
+        text-align: center;
+        padding: 10px;
+        margin: 20px 4px 10px 0;
+        cursor: pointer;
+        background-color: #ddd;
+        transition: border-color 0.2s ease-in-out, background-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .operators div:hover {
+        background-color: #ddd;
+        -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        border-color: #aaa;
+      }
+
+      .operators div:active {
+        font-weight: bold;
+      }
+
+      .leftPanel {
+        display: inline-block;
+      }
+
+      .numbers div {
+        display: inline-block;
+        border: 1px solid #ddd;
+        border-radius: 1px;
+        width: 80px;
+        text-align: center;
+        padding: 10px;
+        margin: 10px 4px 10px 0;
+        cursor: pointer;
+        background-color: #f9f9f9;
+        transition: border-color 0.2s ease-in-out, background-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .numbers div:hover {
+        background-color: #f1f1f1;
+        -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        border-color: #bbb;
+      }
+
+      .numbers div:active {
+        font-weight: bold;
+      }
+
+      div.equal {
+        display: inline-block;
+        border: 1px solid #3079ed;
+        border-radius: 1px;
+        width: 77%;
+        text-align: center;
+        padding: 12px 10px;
+        margin: 10px 6px 10px 0;
+        vertical-align: top;
+        cursor: pointer;
+        color: #fff;
+        background-color: #4d90fe;
+        transition: all 0.2s ease-in-out;
+      }
+
+      div.equal:hover {
+        background-color: #307cf9;
+        -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+        border-color: #1857bb;
+      }
+
+      div.equal:active {
+        font-weight: bold;
+      }
     }
 
     .icon-footer {
@@ -117,7 +245,7 @@ body {
     .icons {
       margin: 0px 0px 0px 0px;
       padding: 30px 30px 30px 30px;
-      width: 50px;
+      width: 70px;
 
       &:hover {
         background-color: #335486;
@@ -165,6 +293,7 @@ body {
         display: none;
         flex-direction: column;
         border: 1px solid #246ad3;
+        border-top-right-radius: 10px;
         z-index: 1;
         position: absolute;
         background-color: #246ad3;
@@ -199,8 +328,7 @@ body {
         display: flex;
         width: 100%;
         background-color: #246ad3;
-        border-top-right-radius: 12px;
-        border-top-right-radius: 12px;
+        border-top-right-radius: 10px;
         align-items: center;
         flex-direction: row;
         justify-content: left;
@@ -247,6 +375,10 @@ body {
         flex-direction: row;
         align-items: center;
 
+        &:hover {
+          background-color: #aec8f0;
+        }
+
         p {
           padding: 0px;
           margin: 0px;
@@ -256,6 +388,11 @@ body {
         h6 {
           padding: 2px;
           margin: 2px;
+        }
+
+        img {
+          padding: 2px;
+          // margin: 5px;
         }
       }
       #allprg {
